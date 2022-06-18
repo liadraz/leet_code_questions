@@ -97,5 +97,33 @@ private:
 class Solution {
 public:
     int search(std::vector<int>& nums_, int target_) 
-    {}
+    {
+        int left = 0;
+        int right = nums_.size() - 1;
+
+        while (left <= right)
+        {
+            int pivot = left + (right - left) / 2;
+
+            // In case target is present at pivot, and return when found
+            if (target_ == nums_[pivot])
+            {
+                return pivot;
+            }
+
+            // In case target is smaller than pivot value, update right index
+            if (target_ < nums_[pivot])
+            {
+                right = pivot - 1;
+            }
+
+            // target is bigger than pivot value, update left index
+            else
+            {
+                left = pivot + 1;
+            }
+        }
+
+        return -1;
+    }
 };
