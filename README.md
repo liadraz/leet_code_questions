@@ -1,2 +1,2 @@
 # leet_code_questions
-A stock of questions and their solutions. Implemented on a various languages.
+A stock of interview questions and solutions. Implemented in various languages.
