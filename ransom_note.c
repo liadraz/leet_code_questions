@@ -31,7 +31,7 @@ bool canConstruct(char *ransomNote, char *magazine)
 {
     int i = 0;
     char* runnerN = ransomNote; //  'aa'
-    char* runnerM = magazine;   //  'aab'
+    char* runnerMag = magazine;   //  'aab'
         
     assert(NULL != ransomNote);
     assert(NULL != magazine);
@@ -41,10 +41,10 @@ bool canConstruct(char *ransomNote, char *magazine)
     int letter_lut[ASCI] = {0};
     
     
-    while (*runnerM != '\0')
+    while (*runnerMag != '\0')
     {
-        letter_lut[*runnerM] += 1;
-        ++runnerM;
+        letter_lut[*runnerMag] += 1;
+        ++runnerMag;
     }
     
     
