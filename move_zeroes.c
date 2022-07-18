@@ -19,6 +19,7 @@
 // Maintain the relative order
 
 
+// Solution In C
 void moveZeroes(int* nums_, int numsSize_)
 {
     // pointer for dest
@@ -53,6 +54,27 @@ void moveZeroes(int* nums_, int numsSize_)
         ++dest;
     } 
 }
+
+
+
+// Solution in C++
+class Solution 
+{
+public:
+    void moveZeroes(vector<int>& nums) 
+    {
+        int counter = 0;
+        
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            if (nums[i] != 0)
+            {
+                std::swap(nums[i], nums[counter]);
+                ++counter;
+            }
+        }
+    }
+};
 
 
 #include <stdio.h>
